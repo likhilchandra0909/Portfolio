@@ -48,7 +48,7 @@ const certificates = [
 ];
 
 export default function Certificates() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");
