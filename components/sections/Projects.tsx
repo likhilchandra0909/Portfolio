@@ -27,7 +27,7 @@ const projects = [
 ];
 
 export default function Projects() {
-  const cardsRef = useRef([]);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,7 +58,7 @@ export default function Projects() {
           {projects.map((project, i) => (
             <div
               key={i}
-              ref={(el) => (cardsRef.current[i] = el)}
+              ref={(el: HTMLDivElement | null) => { if (el) cardsRef.current[i] = el; }}
               className="group flex flex-col h-[480px] rounded-2xl overflow-hidden
                 bg-white/5 border border-white/10
                 transition-all duration-500

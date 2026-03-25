@@ -33,7 +33,7 @@ const education = [
 const delays = ["reveal-d1", "reveal-d2", "reveal-d3"];
 
 export default function Education() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");

@@ -35,7 +35,7 @@ const socials = [
 ];
 
 export default function Contact() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const [form, setForm]   = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [toast, setToast] = useState(false);

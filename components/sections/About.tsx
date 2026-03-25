@@ -9,7 +9,7 @@ const stats = [
 ];
 
 export default function About() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");

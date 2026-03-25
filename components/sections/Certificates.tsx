@@ -49,7 +49,7 @@ const certificates = [
 
 export default function Certificates() {
   /** @type {React.MutableRefObject<HTMLElement|null>} */
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");

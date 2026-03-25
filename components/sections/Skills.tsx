@@ -28,7 +28,7 @@ const row3 = [
 ];
 
 export default function Skills() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");
