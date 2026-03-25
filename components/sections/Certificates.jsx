@@ -48,6 +48,7 @@ const certificates = [
 ];
 
 export default function Certificates() {
+  /** @type {React.MutableRefObject<HTMLElement|null>} */
   const sectionRef = useRef(null);
 
   useEffect(() => {

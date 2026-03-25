@@ -4,15 +4,15 @@ import { useEffect, useRef } from "react";
 
 const stats = [
   { value: "3+",  label: "Years Learning" },
-  { value: "5+", label: "Projects Built" },
+  { value: "20+", label: "Projects Built" },
   { value: "6+",  label: "Certifications" },
 ];
 
 export default function About() {
-  const sectionRef = useRef<HTMLElement | null>(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const els = sectionRef.current?.querySelectorAll<HTMLElement>(".reveal");
+    const els = sectionRef.current?.querySelectorAll(".reveal");
     const obs = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
       { threshold: 0.12 }
@@ -43,11 +43,13 @@ export default function About() {
         Who I Am
       </h2>
 
+      {/* Main card */}
       <div className="reveal reveal-d1 group about-card relative max-w-3xl w-full p-8 rounded-2xl
         bg-white/5 backdrop-blur-md border border-white/10
         transition-all duration-500
         hover:border-blue-400/40 hover:bg-white/[0.04]">
 
+        {/* Corner accent */}
         <div className="absolute top-0 right-0 w-32 h-32 rounded-bl-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{ background: "radial-gradient(circle at top right, rgba(99,102,241,0.15), transparent 70%)" }} />
 
@@ -70,8 +72,10 @@ export default function About() {
           problems through clean, maintainable code.
         </p>
 
+        {/* Divider */}
         <div className="my-8 h-px" style={{ background: "linear-gradient(to right, transparent, rgba(99,102,241,0.4), transparent)" }} />
 
+        {/* Stats */}
         <div className="reveal reveal-d2 flex justify-center gap-12">
           {stats.map(({ value, label }) => (
             <div key={label} className="text-center">
