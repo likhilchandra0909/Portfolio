@@ -68,7 +68,7 @@ export default function Skills() {
   );
 }
 
-function SkillCard({ skill }) {
+function SkillCard({ skill }: { skill: { name: string; icon: string } }) {
   return (
     <div className="group flex flex-col items-center">
       <div className="w-[140px] h-[140px] flex items-center justify-center
