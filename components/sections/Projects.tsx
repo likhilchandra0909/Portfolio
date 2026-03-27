@@ -7,14 +7,14 @@ const projects = [
     title:  "End-to-End DevOps Pipeline",
     desc:   "CI/CD pipeline from GitHub to Kubernetes deployment with automated testing, staging environments, and rollback strategies.",
     tech:   "Docker • Kubernetes • GitHub Actions",
-    github: "https://github.com/your-username/devops-project",
+    github: "https://github.com/likhilchandra0909/DevOps-Project",
     src:    "/project1.png",
   },
   {
     title:  "Food Ordering Website",
     desc:   "Full-stack food ordering platform with authentication, live cart system, and Stripe payments.",
     tech:   "React • Node.js • MongoDB",
-    github: "https://github.com/your-username/food-ordering",
+    github: "https://github.com/likhilchandra0909/ISTHAFOOD",
     src:    "/project2.png",
   },
   {
